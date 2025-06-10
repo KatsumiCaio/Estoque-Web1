@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu Principal - EcoFlorestal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="menu-page">
+  <header>
+    <h1>EcoFlorestal</h1>
+    <button id="logoutBtn">Sair</button>
+  </header>
+
+  <main class="menu-container">
+    <h2>Menu Principal</h2>
+    <div class="menu-grid">
+      <a href="produtos.html" class="menu-card">Cadastro de Produtos</a>
+      <a href="fornecedores.html" class="menu-card">Cadastro de Fornecedores</a>
+      <a href="clientes.html" class="menu-card">Cadastro de Clientes</a>
+      <a href="movimentacoes.html" class="menu-card">Entradas e Saídas</a>
+      <a href="relatorios.html" class="menu-card">Relatórios</a>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('logoutBtn').addEventListener('click', () => {
+      localStorage.removeItem('token');
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>

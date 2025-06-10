@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cadastro de Fornecedores - EcoFlorestal</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page">
+  <header>
+    <h1>Cadastro de Fornecedores</h1>
+    <button onclick="window.location.href='index.html'">← Voltar</button>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Novo Fornecedor</h2>
+      <form id="supplierForm">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" required />
+
+        <label for="cnpj">CNPJ</label>
+        <input type="text" id="cnpj" required />
+
+        <label for="telefone">Telefone</label>
+        <input type="text" id="telefone" />
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" />
+
+        <button type="submit">Cadastrar</button>
+      </form>
+    </section>
+
+    <section class="list-section">
+      <h2>Fornecedores Cadastrados</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>CNPJ</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="supplierTableBody">
+          <!-- Preenchido via JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/fornecedores.js"></script>
+</body>
+</html>
