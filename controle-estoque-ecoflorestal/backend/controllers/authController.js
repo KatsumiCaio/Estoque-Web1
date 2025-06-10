@@ -20,3 +20,10 @@ exports.login = async (req, res) => {
     res.status(500).json({ message: 'Erro no servidor' });
   }
 };
+
+exports.register = async (req, res) => {
+  const { email, password } = req.body;
+  // Lógica de criação do usuário
+  res.status(201).json({ message: 'Usuário registrado com sucesso!' });
+};
+

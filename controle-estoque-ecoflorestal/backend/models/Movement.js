@@ -1,11 +1,11 @@
 const mongoose = require('mongoose');
 
 const movementSchema = new mongoose.Schema({
-  product: { type: mongoose.Schema.Types.ObjectId, ref: 'Product', required: true },
-  type: { type: String, enum: ['entrada', 'saida'], required: true },
-  quantity: { type: Number, required: true },
-  notes: { type: String },
-  date: { type: Date, default: Date.now }
+  produto: { type: mongoose.Schema.Types.ObjectId, ref: 'Product' },
+  quantidade: Number,
+  tipo: { type: String, enum: ['entrada', 'saida'] },
+  data: { type: Date, default: Date.now },
+  observacoes: String,
 });
 
-module.exports = mongoose.model('Movement', movementSchema);
+module.exports = mongoose.models.Movement || mongoose.model('Movement', movementSchema);
